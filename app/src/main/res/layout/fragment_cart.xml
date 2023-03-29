@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:visibility="gone"
+    tools:visibility="visible"
+
+>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="@string/cart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:fontFamily="@font/poppins_semibold"
+        tools:ignore="MissingPrefix" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/tvToolBar"
+        android:layout_above="@id/tvCheckout"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCartFoodList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            tools:visibility="visible"
+            tools:listitem="@layout/row_cartlist" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoDataFound"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_data_found"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:ignore="MissingPrefix" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:background="@drawable/bg_corner_white_10"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="@string/continue_"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        tools:ignore="MissingPrefix,UnusedAttribute" />
+
+
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingVertical="20dp"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="400dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:text="@string/select_option"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        tools:ignore="MissingPrefix" />
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearOption"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/linearButtons"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearDelivery"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:foreground="?selectableItemBackground"
+            android:paddingBottom="20dp"
+            android:background="@drawable/bg_green_corner_10"
+            android:layout_marginHorizontal="8dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDelivery"
+                android:src="@drawable/ic_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:text="@string/delivery"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:textAllCaps="true"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearTakeAway"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:paddingBottom="20dp"
+            android:foreground="?selectableItemBackground"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTakeAway"
+                android:src="@drawable/ic_take_away"
+                android:layout_width="wrap_content"
+
+                android:layout_height="80dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:text="@string/take_away"
+                android:fontFamily="@font/poppins_medium"
+                android:textAllCaps="true"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                android:textSize="@dimen/_10ssp"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/linearOption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnCancel"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_gray_corner_10"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@string/cancel"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="MissingPrefix" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContinue"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_editfield"
+            android:backgroundTint="@color/light_green"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@string/continue_"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="MissingPrefix" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

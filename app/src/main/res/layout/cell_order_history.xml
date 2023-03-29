@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cvOrderHistory"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    app:strokeColor="@color/gray"
+    app:strokeWidth="1dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="#2RZZ8A"
+            android:textAlignment="viewStart"
+
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black" />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="On The Way"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/_9ssp"
+            android:layout_height="@dimen/_35sdp"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderStatus"
+            android:layout_width="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPaymentType"
+            tools:text="PaymentType: Cash"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            android:layout_width="0dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="@dimen/_9ssp"
+            android:layout_marginTop="12dp"
+            android:textAlignment="viewStart"
+
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/dark_gary"
+            app:layout_constraintEnd_toStartOf="@id/tvOrderType"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderType"
+            tools:text="Delivery"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/dark_gary"
+            android:textAlignment="viewEnd"
+
+            app:layout_constraintBaseline_toBaselineOf="@id/tvPaymentType"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderDate"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_5sdp"
+
+            android:ellipsize="end"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentType"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            tools:ignore="MissingPrefix"
+            tools:text="7 July 2022,10:31am" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentType"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:textAlignment="viewEnd"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvOrderDate"
+            tools:ignore="MissingPrefix"
+            tools:text="$99.00" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

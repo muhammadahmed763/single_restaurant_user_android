@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/bg_top_round_shape"
+    android:paddingVertical="15dp"
+    app:behavior_peekHeight="200dp"
+
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    style="@style/Theme.MaterialComponents.BottomSheetDialog"
+    android:theme="@style/Animation.Design.BottomSheetDialog">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFilterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="@string/filter_selection"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivClose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_close_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="12dp"
+        android:baselineAlignBottom="true"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/tvFilterTitle" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVeg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="start"
+        android:text="@string/veg"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:paddingHorizontal="15dp"
+        android:textAlignment="viewStart"
+        android:background="?selectableItemBackground"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/tvVeg" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNonVeg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="start"
+        android:text="@string/non_veg"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:background="?selectableItemBackground"
+        android:paddingHorizontal="15dp"
+        android:textAlignment="viewStart"
+
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/tvNonVeg" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBoth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="start"
+        android:text="@string/both"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:background="?selectableItemBackground"
+        android:paddingHorizontal="15dp"
+        android:textAlignment="viewStart"
+
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/tvBoth" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

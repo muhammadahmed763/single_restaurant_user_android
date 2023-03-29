@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    android:layout_height="wrap_content">
+
+
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivUser"
+            android:layout_width="36dp"
+            android:scaleType="centerCrop"
+            app:riv_oval="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@mipmap/ic_launcher"
+            android:layout_height="36dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserName"
+            android:text="John Doe"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/ivUser"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_ratting"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:src="@drawable/ratting5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/white"
+            app:tint="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatting"
+            android:text="4.5/5.0 Reviews"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/iv_ratting"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy."
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvRatting"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="15dp"
+            android:textSize="12sp"
+            android:lines="3"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

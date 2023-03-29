@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frameLayout"
+    tools:context=".fragment.DynamicFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFoodData"
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_height="match_parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoDataFound"
+        android:fontFamily="@font/poppins_semibold"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data_found"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:ignore="MissingPrefix" />
+
+
+</FrameLayout>

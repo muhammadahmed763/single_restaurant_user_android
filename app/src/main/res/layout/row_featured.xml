@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_160sdp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_230sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                android:padding="@dimen/_6sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/trf_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.05">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivwishlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="2dp"
+                    android:clickable="true"
+                    app:tint="@color/white"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFood"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:elevation="@dimen/_minus4sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_placeholder"
+                app:layout_constraintBottom_toTopOf="@id/cl1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:background="@color/white"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFood">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStarter"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_height="wrap_content"
+                    tools:text="Starter"
+                    android:textSize="@dimen/_8ssp"
+                    android:textAlignment="viewStart"
+
+                    android:textColor="@color/light_green"
+                    app:layout_constraintEnd_toStartOf="@id/ivveg"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingPrefix" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivveg"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:src="@drawable/ic_vegetarian"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingPrefix" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemName"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    android:textAlignment="viewStart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivveg"
+                    tools:ignore="MissingPrefix"
+                    tools:text="Dill Leaves Pakoda" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFoodPriceGrid"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvItemName"
+                    tools:ignore="MissingPrefix"
+                    android:textAlignment="viewStart"
+                    tools:text="$50.00" />
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvItemName"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clQtyUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_23sdp"
+                        android:visibility="gone"
+                        android:background="@drawable/bg_gray_corner_10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivMinus"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:background="?selectableItemBackground"
+                            android:src="@drawable/ic_minus"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/tvFoodQty"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFoodQty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            tools:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/poppins_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/ivPlus"
+                            app:layout_constraintStart_toEndOf="@id/ivMinus"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivPlus"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:src="@drawable/ic_pluss"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tvFoodQty"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnAdd"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_width="@dimen/_52sdp"
+                        android:layout_height="@dimen/_23sdp"
+                        android:background="@drawable/bg_gray_corner_10"
+                        android:gravity="center"
+                        android:text="@string/add"
+                        android:textAllCaps="true"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:textColor="@color/light_green"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_gravity="end"
+                        tools:ignore="MissingPrefix" />
+                </FrameLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

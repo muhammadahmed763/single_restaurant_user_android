@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/clOrderHistory"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+        <!--<ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_nevigation"
+            />-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/my_orders"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearProcessing"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProcessing"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        android:text="@string/processing"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_marginHorizontal="40dp"
+                        android:background="@color/black"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearCompleted"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCompleted"
+                        android:textColor="@color/light_green"
+                        android:textSize="@dimen/_10ssp"
+                        android:text="@string/completed"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_medium"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_marginHorizontal="40dp"
+                        android:background="@color/black"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearCancelled"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCancelled"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10ssp"
+                        android:text="@string/cancelled"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_marginHorizontal="40dp"
+                        android:background="@color/black"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNoDataFound"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/no_data_found"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"
+                    tools:ignore="MissingPrefix" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOrderHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/cell_order_history" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

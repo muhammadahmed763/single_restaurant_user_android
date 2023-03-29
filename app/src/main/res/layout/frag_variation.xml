@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/design_bottom_sheet"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="20dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/ic_close_dialog" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/linearButtons"
+        app:layout_constraintTop_toBottomOf="@id/ivClose"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivVeg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_vegetarian"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvItemName"
+                android:layout_width="0dp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:singleLine="true"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/ivVeg"
+                app:layout_constraintStart_toEndOf="@id/ivVeg"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingPrefix"
+                tools:text="Dill Leaves Pakoda" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVariationTitle"
+                android:layout_width="0dp"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/item_variation"
+                android:textAlignment="viewStart"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivVeg"
+                tools:ignore="MissingPrefix" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVariation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintHeight="wrap"
+                android:overScrollMode="never"
+
+                app:layout_constrainedHeight="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVariationTitle"
+                app:layout_constraintBottom_toTopOf="@id/tvAddOnsTitle"
+                tools:itemCount="3"
+                tools:listitem="@layout/row_variation" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddOnsTitle"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/item_addons"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="wrap"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvVariation"
+                tools:ignore="MissingPrefix" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAddOns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="wrap"
+                android:overScrollMode="never"
+                app:layout_constraintHeight="wrap"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddOnsTitle"
+                app:layout_constraintVertical_bias="0"
+                tools:itemCount="3"
+                tools:listitem="@layout/row_itemaddons" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_gray_corner_10"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@string/cancel"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="MissingPrefix" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContinue"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_editfield"
+            android:backgroundTint="@color/light_green"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@string/continue_"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="MissingPrefix" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

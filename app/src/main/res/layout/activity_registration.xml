@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvvSignup"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:text="@string/signup"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25sdp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingPrefix" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCreate"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/sign_title_hint"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textAlignment="viewStart"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvvSignup"
+        tools:ignore="MissingPrefix" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/emailLayouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tvCreate">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edFullName"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:background="@drawable/ed_white_10"
+            android:gravity="start|center_vertical"
+            android:hint="@string/full_name"
+            android:imeOptions="actionNext"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingPrefix" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edEmail"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/ed_white_10"
+            android:gravity="start|center_vertical"
+            android:hint="@string/email"
+            android:imeOptions="actionNext"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edFullName"
+            tools:ignore="MissingPrefix" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearMobile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/ed_white_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edEmail">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:hint="+91"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLines="10"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textDirection="locale"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingPrefix" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edMobile"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:background="@drawable/bg_white_10"
+                android:backgroundTint="@color/white"
+                android:gravity="start|center_vertical"
+                android:hint="@string/mobile_no"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/edCountryCode"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingPrefix" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edRefralcode"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/ed_white_10"
+            android:gravity="start|center_vertical"
+            android:hint="@string/referral_code_optional"
+            android:imeOptions="actionNext"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearMobile"
+            tools:ignore="MissingPrefix" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvPass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edRefralcode"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ed_white_10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:fontFamily="@font/poppins_regular"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llCheck"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvPass">
+
+            <CheckBox
+                android:id="@+id/cbCheck"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:buttonTint="@color/black"
+                android:gravity="center" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTermsAndCondition"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="start|center_vertical"
+                android:text="@string/i_accept_the_terms_amp_conditions"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSignup"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llCheck"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_editfield"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/signup"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@id/llCheck"
+            tools:ignore="MissingPrefix" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSkip"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSignup"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/skip_amp_continue"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tvSignup"
+            tools:ignore="MissingPrefix" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvSkip"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/already_have_an_account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                tools:ignore="MissingPrefix" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLogin"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:onClick="onClick"
+                android:text="@string/login"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

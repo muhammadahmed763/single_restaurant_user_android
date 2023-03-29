@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+
+    <LinearLayout
+        android:id="@+id/rlForgetPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="onClick"
+            android:padding="@dimen/_5sdp"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/otp_verify"
+            android:paddingHorizontal="10dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_22ssp"
+            tools:ignore="MissingPrefix" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:gravity="start"
+            android:text="@string/otp_screen_hint"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp"
+            tools:ignore="MissingPrefix" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edOTP"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/ed_white_10"
+            android:textColor="@color/black"
+            android:gravity="start|center_vertical"
+            android:hint="@string/enter_otp"
+            android:inputType="phone"
+            android:fontFamily="@font/poppins_regular"
+            android:maxLength="6"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCheckout"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/bg_corner_white_10"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:onClick="onClick"
+
+            android:text="@string/otp_verification"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="MissingPrefix" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimer"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_gravity="end"
+            android:text="@string/resend_otp"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp"
+            tools:ignore="MissingPrefix" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:id="@+id/llOTP"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="@string/don_t_receive_the_otp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                tools:ignore="MissingPrefix" />
+
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvResendOtp"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:text="@string/resend_otp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:layout_gravity="center"
+            tools:ignore="MissingPrefix" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

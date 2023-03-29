@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clSettings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="visible"
+
+    tools:visibility="visible">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTopLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2d2942"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfileTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/my_profile"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingPrefix" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/editProfile"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_corner_white_10"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/ic_base_line_edit_"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvProfileTitle"
+                    app:riv_corner_radius="12dp"
+                    tools:src="@drawable/ic_placeholder" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="Gravity Infotech"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivProfile"
+                    app:layout_constraintTop_toBottomOf="@id/tvProfileTitle"
+                    tools:ignore="MissingPrefix" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="start"
+
+                    android:text="infotechgravity@gmail.com"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivProfile"
+                    app:layout_constraintTop_toBottomOf="@id/tvUserName"
+                    tools:ignore="MissingPrefix" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingHorizontal="16dp"
+                android:text="@string/settings"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clTopLayout"
+
+                tools:ignore="MissingPrefix" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/tvSettings">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearNotification">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_lock"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/change_password"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearManageAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/tvSettings">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_locationn"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/my_address"
+
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearMYWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/tvSettings">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_wallet"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/my_wallet"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearTestiMonial"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/tvSettings">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_starr"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/testimonial"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearReferandEarn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearChangePassword">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user_refer"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/referandearn"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearManageAddress">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_notification"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/notification_settings"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layoutDirection="locale"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearChangeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearReferandEarn">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_change_layout"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/changelayout"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearHelpContactus"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearChangeLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_more_circle"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/helpandcontactus"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearPrivacyPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearHelpContactus">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_shield_done"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/privacy_policy"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearPrivacyPolicy">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_info_square"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/about_us"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearFaqs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearPrivacyPolicy">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_faq"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/faqs"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearPrivacyPolicy">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gallery"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/title_gallery"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearBookTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearPrivacyPolicy">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_calender"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/book_a_table"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearBlogs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearPrivacyPolicy">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_faq"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/blogs"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/linearPrivacyPolicy">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user_refer"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/our_team"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/bg_round_10"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_logout"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLogout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/log_out"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_right_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:tint="@color/gray" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

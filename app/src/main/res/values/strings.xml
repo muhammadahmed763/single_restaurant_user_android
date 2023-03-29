@@ -1,0 +1,390 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Newindian shop</string>
+    <string name="menu_name">Restaurant</string>
+
+    <string name="facebook_id">801192337913216</string>
+    <string name="fb_login_protocol_scheme">FB801192337913216</string>
+
+    <string name="language_english">en</string>
+    <string name="language_hindi">ar</string>
+
+
+    <!-- Todo  Login Screen Text -->
+    <string name="login">Login</string>
+    <string name="sign_in_to_your_account" translatable="false">Sign in to your account</string>
+    <string name="forgot_password_login">Forgot Password?</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="or">------ OR ------</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="signup">Signup</string>
+    <string name="skip_amp_continue"><![CDATA[Skip & Continue]]></string>
+
+
+    <!-- Todo Register Screen Text-->
+    <string name="sign_title_hint">Create an account so you can order your\nfavorite food even faster</string>
+    <string name="full_name">Full name</string>
+    <string name="mobile_no">Mobile</string>
+    <string name="referral_code_optional">Referral code (Optional)</string>
+    <string name="i_accept_the_terms_amp_conditions"><![CDATA[I accept the terms & conditions]]></string>
+    <string name="already_have_an_account">Already have an account?</string>
+
+
+    <!--Todo Forgot Password Screen Text-->
+    <string name="forgot_password">Forgot Password</string>
+    <string name="enter_your_registered_email">Enter your registered email address below. We will <br> </br> send new password in your email.</string>
+    <string name="submit">Submit</string>
+
+
+    <!--Todo Email Verify Screen Text-->
+    <string name="otp_verification"><![CDATA[Verify & Proceed]]></string>
+    <string name="otp_verify">OTP Verification</string>
+    <string name="enter_the_otp_sent_to">Enter OTP below and proceed further.</string>
+    <string name="enter_otp">Enter OTP here</string>
+    <string name="don_t_receive_the_otp">Don’t receive the OTP?</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="validation_otp">Please enter OTP</string>
+
+
+    <!--Todo Home Screen Text-->
+    <string name="welcome_back">Welcome</string>
+    <string name="categories">Categories</string>
+    <string name="today_s_special">Today\'s Special</string>
+    <string name="trending_items">Trending</string>
+    <string name="recommended">Recommended</string>
+    <string name="add">Add</string>
+    <string name="search_here">Search Here…</string>
+    <string name="testimonial">Testimonials</string>
+
+
+    <!-- Todo Product Detail Screen Text -->
+    <string name="inclusiveofalltaxes">Inclusive of all taxes</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="view_cart">View cart</string>
+    <string name="related_product">Related Products</string>
+    <string name="description">Description</string>
+    <string name="size">Size</string>
+    <string name="addons">Add-ons</string>
+
+
+    <!--Todo Filter Screen Text-->
+    <string name="filter_selection">Filter Selection</string>
+    <string name="veg">Veg</string>
+    <string name="non_veg">NonVeg</string>
+
+
+    <!--Todo Search Screen Text-->
+    <string name="search">Search</string>
+    <string name="no_data_found">No data found</string>
+
+
+    <!--Todo FavoriteList Screen Text-->
+    <string name="favourite_list">Favourite List</string>
+
+
+    <!--Todo Cart Screen Text-->
+    <string name="cart">My Cart</string>
+    <string name="continue_">Continue</string>
+    <string name="select_option">Select Option</string>
+    <string name="cancel">Cancel</string>
+    <string name="take_away">Take Away</string>
+    <string name="delivery">Delivery</string>
+
+
+    <!--Todo Order Summery Text-->
+    <string name="order_summary">Order summary</string>
+    <string name="qty">Qty :</string>
+    <string name="promo_code">Promocode</string>
+    <string name="select_promocode">Select promocode</string>
+    <string name="enter_promo_code">Have a promocode?</string>
+    <string name="apply">Apply</string>
+    <string name="remove">Remove</string>
+    <string name="tax">Tax</string>
+    <string name="pickup">Pickup</string>
+    <string name="bill_details">Bill Details</string>
+    <string name="tax_0">Tax(0%)</string>
+    <string name="delivery_charge">Delivery Fee</string>
+    <string name="discount_offer">Discount offer</string>
+    <string name="total_amount">Total amount</string>
+    <string name="delivery_address">Delivery address</string>
+    <string name="select">SELECT</string>
+    <string name="address">Set your delivery address</string>
+    <string name="proceed_to_payment">Proceed to payment</string>
+    <string name="address_error">Please select address</string>
+    <string name="special_instruction">Special Instruction</string>
+    <string name="write_order_instructions">Write order instructions</string>
+    <string name="total_pay">Total Pay</string>
+    <string name="order_total">Order total</string>
+    <string name="offer_error">You are not eligeble for this offer</string>
+
+
+    <!--Todo Payment Option Screen Text-->
+    <string name="payment_options">Payment Options</string>
+    <string name="payment_type_selection_error">Please select payment method</string>
+
+    <!--Todo Order Success Screen Text-->
+    <string name="order_success">Order Success</string>
+    <string name="continue_shooping">Continue Shopping</string>
+    <string name="your_order_has_been_successfully_placed_n_amp_will_be_process_by_system">Your order has been successfully placed \n <![CDATA[&]]> will be process by system</string>
+
+
+    <!-- Todo My Order Screen Text-->
+    <string name="my_orders">My Orders</string>
+    <string name="processing">Processing</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="completed">Completed</string>
+    <string name="order_completed">Completed</string>
+    <string name="cash">Cash</string>
+    <string name="razorpay">Razorpay</string>
+    <string name="wallet">Wallet</string>
+    <string name="flutter_wave">FlutterWave</string>
+    <string name="paystack">Paystack</string>
+    <string name="stripe">Stripe</string>
+    <string name="payment_type_">Payment Type :</string>
+    <string name="order_place">Placed</string>
+    <string name="order_ready">Ready</string>
+    <string name="accepted">Preparing</string>
+    <string name="on_the_way">On the way</string>
+    <string name="waiting_for_pickup">Waiting for pickup</string>
+
+    <!-- Todo Order Detail Screen Text-->
+    <string name="order_detail">Order Details</string>
+
+
+    <!-- Todo My Profile Screen Text-->
+    <string name="my_profile">My Profile</string>
+    <string name="settings">Settings</string>
+    <string name="change_password">Change password</string>
+    <string name="book_a_table">Book A Table</string>
+    <string name="about_us">About us</string>
+    <string name="changelayout">Change Layout</string>
+    <string name="notification">Notification</string>
+    <string name="referandearn"><![CDATA[Refer & Earn]]></string>
+    <string name="helpandcontactus"><![CDATA[Help & Contact Us]]></string>
+    <string name="ltr">LTR</string>
+    <string name="rtl">RTL</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="faqs">FAQs</string>
+    <string name="manage_address">Manage Addresses</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="log_out">Logout</string>
+    <string name="logout">Are you sure to logout from this app?</string>
+    <string name="select_application_layout">Select Application Layout</string>
+    <string name="refer_amp_earn"><![CDATA[Refer & Earn]]></string>
+    <string name="help_amp_contact_us"><![CDATA[Help & Contact Us]]></string>
+    <string name="contact_us">Contact Us</string>
+    <string name="my_address">My Addresses</string>
+
+
+    <!-- Todo Edit Profile Screen Text-->
+    <string name="update">Save</string>
+    <string name="edit_profile">Edit profile</string>
+
+
+    <!-- Todo Change Password Screen Text-->
+    <string name="new_password">New password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="old_password">Old password</string>
+    <string name="reset">Reset</string>
+
+
+    <!-- Todo My Address Screen Text-->
+    <string name="home">Home</string>
+    <string name="homee">HOME</string>
+    <string name="office">OFFICE</string>
+    <string name="other">Other</string>
+    <string name="delete_address_alert">Are you sure to delete this address?</string>
+    <string name="add_new_address">Add New Address</string>
+
+    <!-- Todo Add Address Screen Text-->
+    <string name="addaddress">Add Address</string>
+    <string name="select_delivery_location">Select Delivery Location</string>
+    <string name="change">Change</string>
+    <string name="complete_address">Complete Address</string>
+    <string name="confirm_location">Confirm Location</string>
+    <string name="save_address">Save address</string>
+    <string name="update_address">Update address</string>
+    <string name="edit_address">Edit Address</string>
+
+    <!-- Todo Confirm Address Screen Text-->
+
+    <string name="confirm_address">Confirm Address</string>
+    <string name="a_detailed_address_will_help_our_delivery_parnter_nreach_your_doorstep_easily">A detailed address will help our Delivery Parnter reach your doorstep easily</string>
+    <string name="house_flat_floor_no">House / Flat / Floor No.</string>
+    <string name="apartment_road_area_optional">Apartment / Road / Area (Optional)</string>
+    <string name="save_as">Save As</string>
+    <string name="save_address_details">Save Address Details</string>
+
+
+    <!-- Todo MY Wallet Screen Text-->
+    <string name="wallet_Money">Wallet Money</string>
+    <string name="secure_payments">Secure Payments</string>
+    <string name="fast_amp_easy_payment"><![CDATA[Fast & Easy Payment]]></string>
+    <string name="add_moneyy">+ ADD MONEY</string>
+    <string name="no_document_upload_required">No Document Upload required</string>
+    <string name="total_balance">Total Balance</string>
+    <string name="food_money_can_only_be_used_for_your_food_orders">*WALLET MONEY can only be used for your food orders*</string>
+    <string name="instant_refunds">Instant Refunds</string>
+
+    <!-- Todo Add Money Screen Text-->
+    <string name="add_money_">Add Money</string>
+    <string name="notes">Notes</string>
+    <string name="food_money_cannnot_be_transferred_to_your_bank_account"><![CDATA[-> Wallet Money Cannot Be Transferred to Your Bank Account]]></string>
+    <string name="add_note_hint_2"><![CDATA[-> You can used Food Money only on Restaurant orders.]]></string>
+
+
+    <!-- Todo Stripe Screen Text -->
+    <string name="card_number">Card Number</string>
+    <string name="card_holder_name">Card holder name</string>
+    <string name="expiry">Expiry</string>
+    <string name="mm_yy">MM/YY</string>
+    <string name="mm">MM</string>
+    <string name="yyyy">YYYY</string>
+    <string name="cvv">CVV</string>
+
+    <!--Todo Pay Stack Screen Text -->
+    <string name="full_name_">Full Name</string>
+    <string name="mobileno_number">Mobile Number</string>
+
+    <string name="proceed_to_pay">Proceed To Pay</string>
+    <string name="asterics_3">***</string>
+    <string name="expiry_slash">%1$s/</string>
+    <string name="expiry_space"> %1$s</string>
+    <string name="asterics">**** **** **** **** **</string>
+    <string name="pay_amount">PAY %1$s</string>
+    <string name="card_details_secured">Your details are safe</string>
+    <string name="secured_by_paystack">Secured by Paystack</string>
+
+
+    <!--Todo TransactionHistory Screen Text -->
+    <string name="transaction_history">Transaction History</string>
+    <string name="walletorder">Wallet Order</string>
+    <string name="ordercancelled">Order Cancelled</string>
+    <string name="walletrecharge">Wallet Recharge</string>
+    <string name="orderid">Order Id :</string>
+    <string name="ptrazorpay">Payment Type : RazorPay</string>
+    <string name="ptstripe">Payment Type : Stripe</string>
+    <string name="ptflutterwave">Payment Type : Flutterwave</string>
+    <string name="ptstack">Payment Type : Paystack</string>
+    <string name="referral_amount">Referral Amount</string>
+    <string name="amount_added_by_admin">Amount Added By Admin</string>
+    <string name="amount_deduct_by_admin">Amount Deducted By Admin</string>
+
+    <!--Todo Testimonial Screen Text -->
+    <string name="type_your_description">Enter your review</string>
+
+
+    <!--Todo Refer & Earn Screen -->
+    <string name="share">SHARE</string>
+    <string name="share_this_code_with">Share this code with a friend and you both <br> </br> could be eligible for $0 bonus amount <br> </br> under our Referral Program.</string>
+
+
+    <!--Todo Notification Settings Screen text -->
+    <string name="notification_settings">Notification Settings</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="notification_hint">Keep this on to receive notifications from system</string>
+    <string name="emails">Emails</string>
+
+
+    <!--Todo Help & Contact Us Screen Text-->
+    <string name="inquiry_form">Inquiry Form</string>
+    <string name="message_text">Message</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="developer_by_gravity_infotech">Developed by Gravity infotech</string>
+    <string name="gravity_infotech">Gravity Infotech</string>
+
+    <!--Todo Book a table Screen Text-->
+    <string name="no_of_guest">No Of Guest</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="reservation_type">Reservation Type</string>
+    <string name="special_request_optional">Special Request (Optional)</string>
+
+
+    <!--Todo Variation screen text-->
+    <string name="item_addons">Item Addons</string>
+    <string name="item_variation">Item Variation</string>
+
+
+    <string name="exit_screen">Are you sure to exit from this app?</string>
+    <string name="no_internet">No internet connection.\n Go to device settings and connect to network</string>
+    <string name="error_msg">Please try again. Something went wrong</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings</string>
+
+
+    <string name="validation_valid_email">Please enter valid email</string>
+    <string name="validation_valid_cpassword">Password and confirm password must be same</string>
+    <string name="validation_all">Please enter all details</string>
+
+
+    <string name="driver_information">Driver information</string>
+    <string name="cancelled_order">Cancel Order</string>
+
+    <string name="payment">Payment</string>
+    <string name="select_payment_method">Select Payment Method</string>
+
+
+    <string name="terms_amp_condition"><![CDATA[Terms & Conditions]]></string>
+    <string name="skip">Skip</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="note">Note</string>
+    <string name="okay">Okay</string>
+    <string name="card_information">Card information</string>
+
+    <string name="proceed_to_add_money">PROCEED TO ADD MONEY</string>
+
+
+    <string name="ratting_amp_review"><![CDATA[Ratings & Reviews]]></string>
+    <string name="copy">Copy</string>
+
+
+    <string name="proceed">Proceed</string>
+
+
+    <string name="invalid_key">Invalid google map api key</string>
+    <string name="order_must_between">Order amount must be between</string>
+    <string name="delete_cart_alert">Are you sure to remove this item from your cart list?</string>
+    <string name="wallet_description">Are you sure to cancel this order? If yes, then order amount will be transferred to your wallet.</string>
+    <string name="terms_condition_error">Please accept our terms and conditions</string>
+    <string name="start_">Start</string>
+    <string name="remove_fev_alert">Are you sure to remove this item from your favourite list?</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="valid_amount">Please enter the valid amount</string>
+    <string name="one_amount">Amount must be greater than 1</string>
+    <string name="wallet_sufficient_amount">You don\'t have sufficient wallet amount. Please select another payment method</string>
+    <string name="order_payment">Order Payment</string>
+    <string name="max_qty">You\'ve reached the maximum units allowed for the purchase of this item</string>
+
+
+    <string name="google_free_api_key">AIzaSyAuLjnKdJiQ2K_2eoucQdRD38R3NkWWCX8</string>
+    <string name="error">Error</string>
+
+
+    <string name="delete_cart_msg">go to cart list and remove the item</string>
+    <string name="go_to_cart">Go to Cart</string>
+
+
+    <string name="add_testimonial">Add Testimonial</string>
+    <string name="close_restaurant_error">Restaurant is closed. Try after some time</string>
+    <string name="place_order">Place Order</string>
+    <string name="otp_screen_hint">Check your email for OTP.Enter OTP below and proceed further.</string>
+    <string name="close">Close</string>
+
+    <string name="both">Both</string>
+    <string name="dollar_sign">$</string>
+    <string name="cvv_error">please enter valid CVV</string>
+    <string name="card_detail_error">Please enter valid card detail</string>
+    <string name="blogs">Blogs</string>
+    <string name="our_team">Our Team</string>
+    <string name="post_by_admin">Posted By : Admin</string>
+    <string name="invalid_link">Invalid Url</string>
+    <string name="blog_detail">BlogDetail</string>
+    <string name="social_login_error">You are login with social account</string>
+    <string name="selected_add_ons">Selected Add ons</string>
+    <string name="send_box_error_alert">This operation was not performed due to demo mode</string>
+
+
+</resources>

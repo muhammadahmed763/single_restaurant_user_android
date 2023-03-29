@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:visibility="gone"
+    android:id="@+id/rlFavourites"
+    tools:visibility="visible"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:id="@+id/rlToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            app:fontFamily="@font/poppins_semibold"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/favourite_list"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlToolBar"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoDataFound"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_data_found"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            tools:ignore="MissingPrefix" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:layout_marginEnd="@dimen/_5sdp"
+            tools:listitem="@layout/row_foodsubcategory"
+            android:id="@+id/rvFavourite"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

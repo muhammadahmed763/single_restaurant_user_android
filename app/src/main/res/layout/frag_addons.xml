@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment.FragAddons">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:text="@string/selected_add_ons"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_height="?actionBarSize"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAddOns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        tools:itemCount="3"
+        tools:listitem="@layout/row_itemaddons" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

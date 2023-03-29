@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/linearAddresses"
+    android:visibility="gone"
+    tools:visibility="visible"
+    tools:context=".activity.GetAddressActivity">
+    <RelativeLayout
+        android:id="@+id/rlToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/my_address"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            tools:ignore="MissingPrefix" />
+
+    </RelativeLayout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="0dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAddressList"
+        android:layout_width="match_parent"
+        app:layout_constrainedHeight="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        tools:listitem="@layout/cell_address_list"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnAddNewAddress"
+        android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoDataFound"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data_found"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="visible"
+        tools:ignore="MissingPrefix" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddNewAddress"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bg_white_10"
+        android:backgroundTint="#0d9444"
+        android:padding="5dp"
+        android:text="@string/add_new_address"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingPrefix" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

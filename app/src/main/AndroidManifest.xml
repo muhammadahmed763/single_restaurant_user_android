@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.singlerestaurant.user">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+
+        </intent>
+        <package android:name="com.facebook.katana" />
+
+    </queries>
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".activity.ActCmsPages"
+            android:screenOrientation="sensorPortrait"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActBlogsDetail"
+            android:screenOrientation="sensorPortrait"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActOurTeam"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActBlogs"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActViewAll"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActRattings"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActPayStack"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActFaq"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActGallery"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActBookTable"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActSubCategoryProducts"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActTransactionHistory"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActNotificationSetting"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActAddMoney"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActMyWallet"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActStripePayment"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActAddMoneyPaymentPay"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActAddReview"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activity.ActConfirmAddress"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActAddAddress"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activity.ActFoodDetails"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ActCategories"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".activity.ContactUsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.RegistrationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ForgetPasswordActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.TutorialActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.GetAddressActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.OrderSummeryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.PaymentPayActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ImageSliderActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.OTPVerificationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.TermsAndConditionActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ReferAndEarnActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.PaymentSuccessfulActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service
+            android:name=".service.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+            android:exported="true"
+            android:screenOrientation="unspecified"
+            android:theme="@style/Theme.Transparent.ImagePicker" />
+        <activity
+            android:name="in.mayanknagwanshi.countrypicker.CountrySelectActivity"
+            android:exported="true"
+            android:theme="@style/CountryAppTheme" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_small_notification" />
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_id"/>
+
+    </application>
+
+</manifest>

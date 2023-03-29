@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/clDetailLayout"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:clickable="true"
+    android:focusable="true"
+    android:fitsSystemWindows="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+
+            android:elevation="@dimen/_5sdp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@id/linearBottomLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/_10sdp">
+
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_250sdp">
+
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        app:tabBackground="@drawable/tab_selector"
+                        app:tabGravity="center"
+                        android:background="@null"
+                        app:tabIndicatorHeight="0dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:tabPaddingEnd="10dp"
+                        app:tabPaddingStart="10dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivveg"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:layout_below="@id/clPager"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="?selectableItemBackground"
+                    android:src="@drawable/ic_vegetarian" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clPager"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/ivveg"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp"
+                    tools:ignore="MissingPrefix"
+                    tools:text="Dill Leaves Pakada" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivveg"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/light_green"
+                    android:textSize="@dimen/_9sdp"
+                    tools:ignore="MissingPrefix"
+
+                    tools:text="Starter" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTimeMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivveg"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_10sdp"
+
+                    tools:ignore="MissingPrefix"
+                    tools:text="10min" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvType"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+
+                    tools:ignore="MissingPrefix"
+                    tools:text="$150.00" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTaxes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvItemPrice"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/inclusiveofalltaxes"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="viewStart"
+
+                    tools:ignore="MissingPrefix" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cldetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTaxes"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/description"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15ssp"
+                        android:textAlignment="viewStart"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingPrefix" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cldetails"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:justificationMode="inter_word"
+                    android:text="A barbershop is one of the places where people go to get their hair cut. You might visit a barbershop at the beginning of every summer to get a short crew cut. While some hair cutters call themselves stylists and the places where they work salons, others are barbers who trim hair and shave necks in barbershops."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+
+                    tools:ignore="MissingPrefix" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clVariation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvItemDetails"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVariation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/size"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:textAlignment="viewStart"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingPrefix" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvVariation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clVariation"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:overScrollMode="never"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/row_variation" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAddons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rvVariation"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAddons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/addons"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingPrefix" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAddonslist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clAddons"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:overScrollMode="never"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/row_itemaddons" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clRelated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rvAddonslist"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRelated"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/related_product"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ivCategories"
+                        tools:ignore="MissingPrefix" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivCategories"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/ic_dark_right_arrow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvItemRelatedProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clRelated"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/row_featured" />
+
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_8sdp">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnViewCart"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_black_border_5"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/view_cart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="MissingPrefix" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddCart"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@id/rvItemRelatedProduct"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_black_round_10"
+                android:backgroundTint="@color/light_green"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="MissingPrefix" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="?attr/actionBarSize"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/black_corner_5"
+            android:backgroundTint="@color/black"
+
+            android:padding="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:foreground="?selectableItemBackground"
+            android:src="@drawable/ic_back"
+            app:tint="@color/white"
+            tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivwishlist"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/black_corner_5"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="@color/black"
+
+            android:elevation="2dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_unfav"
+            app:tint="@color/white"
+            tools:ignore="UnusedAttribute" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
